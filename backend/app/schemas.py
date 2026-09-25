@@ -28,6 +28,13 @@ class EntryPayload(BaseModel):
     remark: str | None = None
 
 
+class SavedViewPayload(BaseModel):
+    """桥梁档案常用筛选视图的保存入参。"""
+
+    name: str
+    params: dict[str, Any] = Field(default_factory=dict)
+
+
 
 class RoadEntry(BaseModel):
     """道路设施明细结构。"""
